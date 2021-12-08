@@ -1,9 +1,91 @@
 {
     "intents": [
         {
-            "tag": "",
+            "tag": "no_question",
             "patterns": [],
-            "responses": []
-        },      
+            "responses": [
+                "Sorry, I can't understand you",
+                "Can I help you?",
+                "Not sure I understand",
+                "You typed nothing, any question please",
+                "You typed nothing, any help"
+            ]
+        },
+        {
+            "tag": "greetings",
+            "patterns": [
+                "Hello", 
+                "Hi there", 
+                "Is anyone there", 
+                "Good day", 
+                "How are you", 
+                "How is it going", 
+                "Greetings", 
+                "Hi, how is it going", 
+                "How are you doing",  
+                "What's up", 
+                "What about you", 
+                "Wassup", 
+                "How is it", 
+                "Hi", 
+                "Hey"
+            ],
+            "responses": [
+                "Hi there, how can I help",
+                "Hello, thanks for visiting",
+                "Hello, any help",
+                "Fine, thanks",
+                "Pretty good, hope to be okay",
+                "hello", "I'm Astro, can I help you",
+                "Awesome, hope all is well with you too"
+            ]
+        },
+        {
+            "tag": "",
+            "patterns": [""],
+            "responses": [""]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks", 
+                "Thank you", 
+                "Many thanks to you", 
+                "That's helpful", 
+                "Awesome, thanks", 
+                "Thanks for helping me"
+            ],
+            "responses": [
+                "You're very welcome", 
+                "Happy to help!", 
+                "Glad to have helped you", 
+                "Any time!", 
+                "My pleasure", 
+                "It's my duty", 
+                "Don't mention it!"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Goodbye", 
+                "Nice to meet you, bye", 
+                "Nice chatting with you, bye", 
+                "See you later", 
+                "See ya", 
+                "Back soon", 
+                "Take care", 
+                "Till next time", 
+                "See you soon", 
+                "stay in touch, goodbye"
+            ],
+            "responses": [
+                "See you", 
+                "Nice to meet you too, take care", 
+                "Have a nice day", 
+                "Bye! come back again soon", 
+                "Bye, we stay in touch"
+            ]
+        }      
     ]
 }
