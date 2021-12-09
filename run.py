@@ -55,7 +55,7 @@ def get_response(intents_list, intents_json):
     category = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
     for item in list_of_intents:
-        if item['tag'] == category:
+        if item['category'] == category:
             result = random.choice(item['responses'])
             break
     return result
