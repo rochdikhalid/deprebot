@@ -59,3 +59,11 @@ def get_response(intents_list, intents_json):
             result = random.choice(item['responses'])
             break
     return result
+
+print("I'm Astro, I'm here to help you boost your mental health ...")
+
+while True:
+    message = input('')
+    ints = predict_category(message)
+    response = get_response(ints, intents)
+    print(response)
