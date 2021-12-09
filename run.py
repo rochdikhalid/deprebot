@@ -37,3 +37,25 @@ def encode(pattern):
             if word == w:
                 bag[i] = 1
     return np.array(bag)
+
+# To predict the pattern category
+def predict_category(pattern):
+    bow = encode(pattern)
+    res = model.predict(np.array([bow]))[0]
+    ERROR_THRESHOLD = 0.25
+    result = [[i, j] for i, j in enumerate(res) if j > ERROR_THRESHOLD]
+    result.sort(key = lambda x: x[1], reverse = True)
+    return_list = []
+    for item in result:
+        return_list.append({'intent': classes[item[0]], 'probability': str(item[1])})
+    return return_list
+
+# To execute the response
+def get_response(intents_list, intents_json):
+    category = intents_list[0]['intent']
+    list_of_intents = intents_json['intents']
+    for item in list_of_intents:
+        if item['tag'] == category:
+            result = random.choice(item['responses'])
+            break
+    return result
