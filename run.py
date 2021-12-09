@@ -22,3 +22,18 @@ y_train = data['y_train']
 # To load the model
 model = load_model('../models/model.h5')
 
+# To clean up the pattern using some NLP techniques
+def clean_up(pattern):
+    pattern_of_words = tokenizer.tokenize(pattern)
+    pattern_of_words = [lemmatizer.lemmatize(word.lower()) for word in pattern_of_words]
+    return pattern_of_words
+
+# Encoding: "Bag of words" method
+def encode(pattern):
+    pattern_of_words = clean_up(pattern)
+    bag = [0] * len(words)
+    for w in pattern_of_words:
+        for i, word in enumerate(words):
+            if word == w:
+                bag[i] = 1
+    return np.array(bag)
