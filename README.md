@@ -4,7 +4,7 @@ A deep learning chatbot built with Tensorflow and Keras, it comes from a far gal
 ## Setup
 
 * **1-** Go to the [Anaconda website](https://www.anaconda.com/) to install *Anaconda*, it's preferable to have the latest version of Python for the appropriate architecture.
-* **2-** Use the **requirement.txt** file to install the dependencies.
-`pip install -r requirements.txt`<br>
+* **2-** Use the **requirement.txt** file to install the dependencies.<br>
+`pip install -r requirements.txt`
 * **3-** Use **Jupyter** or **Jupyter lab** to open up the notebook.
 * **4-** Run the **run.py** file to test and start the conversation with **Astro**.
