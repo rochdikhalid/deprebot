@@ -1,1 +1,3 @@
-
+tensorflow==2.4.0
+tensorflow-estimator==2.4.0
+nltk==3.5
